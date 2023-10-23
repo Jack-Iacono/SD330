@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<title>E06-Iacono</title>
+		<meta charset="UTF-8">
+		
+		<style>
+			body 
+			{
+				background-color: white; 
+				color: black; 
+				font-family: verdana;
+			}
+			h1
+			{
+				text-align: center;
+			}
+			h2
+			{
+				padding: 0px 0px 0px 0px;
+				margin: 0px 0px 0px 0px;
+				text-align: center;
+			}
+			
+			.dateTime
+			{
+				padding: 0px 0px 0px 0px;
+				margin: 0px 0px 0px 0px;
+				text-align: center;
+			}
+			.contentArea
+			{
+				height: 400px;
+			}
+			.fridgeSectionLarge
+			{
+				border: solid black;
+				border-width: 5px;
+				padding: 2px 2px 2px 2px;
+				margin: 10px 10px 10px 10px;
+				background-color: lightblue;
+				width: 60%;
+			}
+			.fridgeSectionSmall
+			{
+				border: solid black;
+				border-width: 5px;
+				padding: 2px 2px 2px 2px;
+				margin: 10px 10px 10px 10px;
+				background-color: lightcyan;
+			}
+			.fridgeButton
+			{
+				width: 24.25%;
+			}
+			
+		</style>
+		
+	</head>
+	
+	<body onLoad="onLoad()">
+		
+		<div class="fridgeSectionLarge">
+		
+			<h1>Smart Fridge&reg</h1>
+			
+			<div id="dateTimeSection" class="fridgeSectionSmall" style="height: 40px;">
+				<input type=button onclick="clickOnOffButton()" id="onOffButton" value="Off" style="width:100%;">
+				<p id="date" class="dateTime" style="float:left;">--:--</p>
+				<p id="clock" class="dateTime" style="float:right;">--:--</p>
+			</div>
+				
+			<div id="mainSection" class="fridgeSectionSmall">
+				<h2 id="title">Title</h2>
+				<br>
+				<div class="contentArea" id="contentArea">
+				
+				</div>
+			</div>
+			
+			<div id="buttonSection" class="fridgeSectionSmall">
+				<input type=button onclick="clickButton('tempButton')" id="tempButton" value="Temperature" class="fridgeButton">
+				<input type=button onclick="clickButton('insideButton')" id="insideButton" value="Inside View" class="fridgeButton">
+				<input type=button onclick="clickButton('tvButton')" id="tvButton" value="TV" class="fridgeButton">
+				<input type=button onclick="clickButton('browserButton')" id="browserButton" value="Browse" class="fridgeButton">
+			</div>
+			
+		</div>
+	
+		<footer>
+			<hr>
+			<center><small>&copy J. Iacono - 10/13/2023</small></center>
+		</footer>
+	
+		<script>
+			
+			//Clock Stuff
+			function startClock()
+			{
+				//Calls the function every second
+				setInterval(clockTick, 1000);
+				checkDate();
+			}
+			function clockTick()
+			{
+				var date = new Date();
+				var hours = date.getHours();
+				var mins = date.getMinutes();
+				var secs = date.getSeconds();
+				
+				var timeString = hours + ":" + mins;
+				
+				var clockElement = document.getElementById("clock");
+				clockElement.textContent = timeString;
+			}
+			function checkDate()
+			{
+				var date = new Date();
+				var month = date.getMonth();
+				var day = date.getDate();
+				
+				var weekDay = date.getDay();
+				
+				switch(weekDay)
+				{
+					case 1:
+						weekDay = "Monday";
+						break;
+					case 2:
+						weekDay = "Tuesday";
+						break;
+					case 3:
+						weekDay = "Wednesday";
+						break;
+					case 4:
+						weekDay = "Thursday";
+						break;
+					case 5:
+						weekDay = "Friday";
+						break;
+					case 6:
+						weekDay = "Saturday";
+						break;
+					case 7:
+						weekDay = "Sunday";
+						break;
+					default:
+						weekDay = "Default Day";
+						break;
+				}
+				
+				var dateString = weekDay + "   " + month + "/" + day;
+				
+				var dateElement = document.getElementById("date");
+				dateElement.textContent = dateString;
+			}
+			
+			function onLoad()
+			{
+				clickOnOffButton();
+				startClock();
+			}
+			
+			function clickOnOffButton()
+			{
+				var button = document.getElementById("onOffButton");
+				
+				if(button.value == "On")
+				{
+					//Turn Off
+					button.value = "Off";
+					
+					button.style.backgroundColor = "lightcoral";
+					
+					document.getElementById("title").textContent = "System Off";
+					document.getElementById("contentArea").textContent = "";
+					resetColors();
+					
+					//Turn off all buttons
+					document.getElementById("tempButton").setAttribute("onClick", "");
+					document.getElementById("insideButton").setAttribute("onClick", "");
+					document.getElementById("tvButton").setAttribute("onClick", "");
+					document.getElementById("browserButton").setAttribute("onClick", "");
+					}
+				else
+				{
+					//Turn On
+					button.value = "On";
+					clickButton("tempButton");
+					
+					button.style.backgroundColor = "aquamarine";
+					
+					//Turn off all buttons
+					document.getElementById("tempButton").setAttribute("onClick", "clickButton('tempButton')");
+					document.getElementById("insideButton").setAttribute("onClick", "clickButton('insideButton')");
+					document.getElementById("tvButton").setAttribute("onClick", "clickButton('tvButton')");
+					document.getElementById("browserButton").setAttribute("onClick", "clickButton('browserButton')");
+				}
+			}
+			
+			function clickButton(id)
+			{
+				resetColors();
+			
+				var title = document.getElementById("title");
+				var content = document.getElementById("contentArea");
+			
+				switch(id)
+				{
+				
+					case "tempButton":
+						title.textContent = "Temperature";
+						content.innerHTML = "Current Temperature: 32&deg<br><img src='https://pbs.twimg.com/media/DXy-UNUXkAEEvtc.jpg' id='tempImage' width=25% height=75%>";
+						break;
+					case "insideButton":
+						title.textContent = "Inside View";
+						content.innerHTML = "<img src='https://www.sandravalvassori.com/wp-content/uploads/2021/04/2020-3260-6-728x811.jpg' id='insideImage' width=100% height=100%>";
+						break;
+					case "tvButton":
+						title.textContent = "TV";
+						content.innerHTML = "<img src='https://helios-i.mashable.com/imagery/articles/050dp8KC8xJDS9H4Ml2KfUq/hero-image.fill.size_1200x675.v1623373471.png' id='tvImage' width=100% height=100%>";
+						break;
+					case "browserButton":
+						title.textContent = "Browse";
+						content.innerHTML = "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_Homepage.svg/1280px-Google_Homepage.svg.png' id='tvImage' width=100% height=100%>";
+						break;
+					default:
+						title.textContent = "";
+						content.textContent = "";
+						break
+				
+				}
+				
+				var buttonElement = document.getElementById(id);
+				
+				buttonElement.style.backgroundColor = "grey";
+				buttonElement.style.color = "white";
+			}
+			function resetColors()
+			{
+				document.getElementById("tempButton").style.backgroundColor = "white";
+				document.getElementById("tempButton").style.color = "black";
+				document.getElementById("insideButton").style.backgroundColor = "white";
+				document.getElementById("insideButton").style.color = "black";
+				document.getElementById("tvButton").style.backgroundColor = "white";
+				document.getElementById("tvButton").style.color = "black";
+				document.getElementById("browserButton").style.backgroundColor = "white";
+				document.getElementById("browserButton").style.color = "black";
+			}
+			
+		</script>
+	
+	</body>
+	
+</html>
