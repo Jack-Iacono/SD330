@@ -2,7 +2,7 @@
 <html lang="en">
 	
 	<head>
-		<title>E06-Iacono</title>
+		<title>Fridge App</title>
 		<meta charset="UTF-8">
 		
 		<style>
@@ -31,28 +31,129 @@
 			}
 			.contentArea
 			{
-				height: 400px;
+				height: 100%;
+				width: 100%;
 			}
 			.fridgeSectionLarge
 			{
 				border: solid black;
 				border-width: 5px;
-				padding: 2px 2px 2px 2px;
+				padding: 10px 10px 10px 10px;
 				margin: 10px 10px 10px 10px;
 				background-color: lightblue;
-				width: 60%;
+				width: 1400px;
+				height: 700px;
 			}
 			.fridgeSectionSmall
 			{
 				border: solid black;
 				border-width: 5px;
 				padding: 2px 2px 2px 2px;
-				margin: 10px 10px 10px 10px;
+				margin: 5px 10px 10px 10px;
 				background-color: lightcyan;
+				
+				width: auto;
+				height: 80%;
 			}
 			.fridgeButton
 			{
-				width: 24.25%;
+				width: 19.25%;
+				height: 100%;
+				margin: auto;
+				padding: auto;
+			}
+			
+			.leftSection
+			{
+				border: solid black;
+				border-width: 5px;
+				padding: 2px 2px 2px 2px;
+				margin: 2px 2px 2px 10px;
+				background-color: lightcyan;
+				
+				float: right;
+				width: 20%;
+				height: 5%;
+			}
+			.rightSection
+			{
+				border: solid black;
+				border-width: 5px;
+				padding: 2px 2px 2px 2px;
+				margin: 2px 10px 2px 2px;
+				background-color: lightcyan;
+				
+				float: right;
+				width: 20%;
+				height: 5%;
+			}
+			.middleSection
+			{
+				border: solid black;
+				border-width: 5px;
+				padding: 2px 2px 2px 2px;
+				margin: 2px 2px 2px 2px;
+				background-color: lightcyan;
+				
+				float: right;
+				width: 55%;
+				height: 5%;
+			}
+			.shoppingSection
+			{
+				border: solid black;
+				border-width: 5px;
+				padding: 2px 2px 2px 2px;
+				margin: 5px 10px 10px 10px;
+				background-color: white;
+				
+				width: 20%;
+				height: 95%;
+				float: left;
+			}
+			.shoppingImage
+			{
+				border: solid black;
+				border-width: 5px;
+				padding: 2px 2px 2px 2px;
+				margin: 5px 10px 10px 10px;
+				background-color: white;
+				
+				width: auto;
+				height: 95%;
+				float: left;
+			}
+			.musicImage
+			{
+				border: solid black;
+				border-width: 5px;
+				padding: 2px 2px 2px 2px;
+				margin: 5px 10px 10px 10px;
+				background-color: white;
+				
+				width: auto;
+				height: 95%;
+				
+				margin-left:auto;
+				margin-right:auto;
+				display:block;
+			}
+			
+			.clockButton
+			{
+				width: 100%;
+				height: 100%;
+			}
+			.tempButtons
+			{
+				width: 32%;
+				height: 100%;
+				float: right;
+			}
+			.fitImage
+			{
+				width: 100%;
+				height: 100%;
 			}
 			
 		</style>
@@ -60,30 +161,57 @@
 	</head>
 	
 	<body onLoad="onLoad()">
+	
+		<audio id="timerAudio">
+		  <source src="./alarm.mp3" type="audio/mpeg">
+		  Your browser does not support the audio element.
+		</audio>
+		<audio id="tv_startAudio">
+		  <source src="./tv_start.mp3" type="audio/mpeg">
+		  Your browser does not support the audio element.
+		</audio>
 		
 		<div class="fridgeSectionLarge">
 		
-			<h1>Smart Fridge&reg</h1>
-			
-			<div id="dateTimeSection" class="fridgeSectionSmall" style="height: 40px;">
-				<input type=button onclick="clickOnOffButton()" id="onOffButton" value="Off" style="width:100%;">
-				<p id="date" class="dateTime" style="float:left;">--:--</p>
-				<p id="clock" class="dateTime" style="float:right;">--:--</p>
-			</div>
-				
-			<div id="mainSection" class="fridgeSectionSmall">
-				<h2 id="title">Title</h2>
-				<br>
-				<div class="contentArea" id="contentArea">
-				
-				</div>
+			<div id="timeSection" class="rightSection">
+				<input type=button class="clockButton" id="clock" class="dateTime" onclick="clickClock()" value="--:--">
 			</div>
 			
-			<div id="buttonSection" class="fridgeSectionSmall">
-				<input type=button onclick="clickButton('tempButton')" id="tempButton" value="Temperature" class="fridgeButton">
+			<div id="buttonSection" class="middleSection">
+				<input type=button onclick="clickButton('shopButton')" id="shopButton" value="Shopping List" class="fridgeButton">
 				<input type=button onclick="clickButton('insideButton')" id="insideButton" value="Inside View" class="fridgeButton">
 				<input type=button onclick="clickButton('tvButton')" id="tvButton" value="TV" class="fridgeButton">
 				<input type=button onclick="clickButton('browserButton')" id="browserButton" value="Browse" class="fridgeButton">
+				<input type=button onclick="clickButton('musicButton')" id="musicButton" value="Music" class="fridgeButton">
+			</div>
+			
+			<div id="onOffSection" class="leftSection">
+				<input type=button onclick="clickOnOffButton()" id="onOffButton" value="Off" style="width:100%;height:100%;">
+			</div>	
+			
+			<div id="timerSection" class="rightSection">
+				<input type=button id="timer" class="clockButton" onclick="clickTimer()" value="Click to Start Timer">
+			</div>
+				
+			<div id="weatherSection" class="middleSection">
+				<img src="./weather forecast.png" alt="Weather Forecast" class="fitImage">
+			</div>	
+			
+			<div id="tempSection" class="leftSection">
+			
+				<input type=button id="tempDown" class="tempButtons" onclick="changeTemp(-1)" value="&#8964">
+				<input type=button id="temp" class="tempButtons" onclick="tempConvert()" value="31">
+				<input type=button id="tempUp" class="tempButtons" onclick="changeTemp(1)" value="^">
+				
+			</div>	
+			
+			
+			<div style="clear:right"></div>
+				
+			<div id="mainSection" class="fridgeSectionSmall">
+				<div class="contentArea" id="contentArea">
+					
+				</div>
 			</div>
 			
 		</div>
@@ -95,11 +223,26 @@
 	
 		<script>
 			
+			var militaryTime = false;
+			
+			var tempF = true;
+			var currentTemp = 32;
+			
+			var timerLength = 60;
+			var currentTimer = 0;
+			
+			var timerIntervalID;
+			
+			var timerAudio = document.getElementById("timerAudio");
+			var tv_startAudio = document.getElementById("tv_startAudio");
+			
+			var shoppingList = [ "Apples", "Bananas", "Carrots", "Deli Ham", "Eggs" ];
+			
 			//Clock Stuff
 			function startClock()
 			{
 				//Calls the function every second
-				setInterval(clockTick, 1000);
+				setInterval(clockTick, 500);
 				checkDate();
 			}
 			function clockTick()
@@ -109,15 +252,28 @@
 				var mins = date.getMinutes();
 				var secs = date.getSeconds();
 				
-				var timeString = hours + ":" + mins;
+				if(militaryTime && hours > 12)
+				{
+					hours -= 12;
+				}
+				
+				if(mins > 9)
+				{
+					var timeString = hours + ":" + mins;
+				}
+				else
+				{
+					var timeString = hours + ":0" + mins;
+				}
 				
 				var clockElement = document.getElementById("clock");
-				clockElement.textContent = timeString;
+				
+				clockElement.value = timeString;
 			}
 			function checkDate()
 			{
 				var date = new Date();
-				var month = date.getMonth();
+				var month = date.getMonth() + 1;
 				var day = date.getDate();
 				
 				var weekDay = date.getDay();
@@ -152,14 +308,15 @@
 				
 				var dateString = weekDay + "   " + month + "/" + day;
 				
-				var dateElement = document.getElementById("date");
-				dateElement.textContent = dateString;
+				//var dateElement = document.getElementById("date");
+				//dateElement.textContent = dateString;
 			}
 			
 			function onLoad()
 			{
 				clickOnOffButton();
 				startClock();
+				changeTemp(0);
 			}
 			
 			function clickOnOffButton()
@@ -173,60 +330,59 @@
 					
 					button.style.backgroundColor = "lightcoral";
 					
-					document.getElementById("title").textContent = "System Off";
 					document.getElementById("contentArea").textContent = "";
 					resetColors();
 					
 					//Turn off all buttons
-					document.getElementById("tempButton").setAttribute("onClick", "");
+					document.getElementById("shopButton").setAttribute("onClick", "");
 					document.getElementById("insideButton").setAttribute("onClick", "");
 					document.getElementById("tvButton").setAttribute("onClick", "");
 					document.getElementById("browserButton").setAttribute("onClick", "");
+					document.getElementById("musicButton").setAttribute("onClick", "");
 					}
 				else
 				{
 					//Turn On
 					button.value = "On";
-					clickButton("tempButton");
+					clickButton("shopButton");
 					
 					button.style.backgroundColor = "aquamarine";
 					
 					//Turn off all buttons
-					document.getElementById("tempButton").setAttribute("onClick", "clickButton('tempButton')");
+					document.getElementById("shopButton").setAttribute("onClick", "clickButton('shopButton')");
 					document.getElementById("insideButton").setAttribute("onClick", "clickButton('insideButton')");
 					document.getElementById("tvButton").setAttribute("onClick", "clickButton('tvButton')");
 					document.getElementById("browserButton").setAttribute("onClick", "clickButton('browserButton')");
+					document.getElementById("musicButton").setAttribute("onClick", "clickButton('musicButton')");
 				}
 			}
 			
 			function clickButton(id)
 			{
 				resetColors();
-			
-				var title = document.getElementById("title");
 				var content = document.getElementById("contentArea");
 			
 				switch(id)
 				{
 				
-					case "tempButton":
-						title.textContent = "Temperature";
-						content.innerHTML = "Current Temperature: 32&deg<br><img src='https://pbs.twimg.com/media/DXy-UNUXkAEEvtc.jpg' id='tempImage' width=25% height=75%>";
+					case "shopButton":
+						content.innerHTML = "<div class='shoppingSection'><input id='newItem' value=''><input type=button onclick='addShoppingItem()' value='Add Item'><div id='shoppingList'></div></div><div class='shoppingImage'><img src='./shoprite page.png' style='width:auto;height:100%;margin-left:auto;margin-right:auto;display:block;'></div>";
+						updateShoppingList();
 						break;
 					case "insideButton":
-						title.textContent = "Inside View";
 						content.innerHTML = "<img src='https://www.sandravalvassori.com/wp-content/uploads/2021/04/2020-3260-6-728x811.jpg' id='insideImage' width=100% height=100%>";
 						break;
 					case "tvButton":
-						title.textContent = "TV";
+						playAudio("tv_start");
 						content.innerHTML = "<img src='https://helios-i.mashable.com/imagery/articles/050dp8KC8xJDS9H4Ml2KfUq/hero-image.fill.size_1200x675.v1623373471.png' id='tvImage' width=100% height=100%>";
 						break;
 					case "browserButton":
-						title.textContent = "Browse";
 						content.innerHTML = "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_Homepage.svg/1280px-Google_Homepage.svg.png' id='tvImage' width=100% height=100%>";
 						break;
+					case "musicButton":
+						content.innerHTML = "<div class='musicImage'><img src='./spotify.png' style='width:auto;height:100%;margin-left:auto;margin-right:auto;display:block;'></div>";
+						break;
 					default:
-						title.textContent = "";
 						content.textContent = "";
 						break
 				
@@ -239,14 +395,121 @@
 			}
 			function resetColors()
 			{
-				document.getElementById("tempButton").style.backgroundColor = "white";
-				document.getElementById("tempButton").style.color = "black";
+				document.getElementById("shopButton").style.backgroundColor = "white";
+				document.getElementById("shopButton").style.color = "black";
 				document.getElementById("insideButton").style.backgroundColor = "white";
 				document.getElementById("insideButton").style.color = "black";
 				document.getElementById("tvButton").style.backgroundColor = "white";
 				document.getElementById("tvButton").style.color = "black";
 				document.getElementById("browserButton").style.backgroundColor = "white";
 				document.getElementById("browserButton").style.color = "black";
+				document.getElementById("musicButton").style.backgroundColor = "white";
+				document.getElementById("musicButton").style.color = "black";
+			}
+			
+			function clickClock()
+			{
+				if(militaryTime)
+				{
+					militaryTime = false;
+				}
+				else
+				{
+					militaryTime = true;
+				}
+			}
+			
+			function changeTemp(change)
+			{
+				currentTemp += change;
+				
+				tempElement = document.getElementById("temp");
+				
+				if(tempF)
+					tempElement.value = currentTemp.toString() + "°F";
+				else
+					tempElement.value = (Math.floor((currentTemp - 32) * (5/9))).toString() + "°C";
+			}
+			function tempConvert()
+			{
+				if(tempF)
+					tempF = false;
+				else
+					tempF = true;
+					
+				changeTemp(0);
+			}
+			
+			function clickTimer()
+			{
+			
+				if(currentTimer == 0)
+				{
+					currentTimer = timerLength;
+					timerIntervalID = setInterval(clickTimer, 1000);
+				}
+				else
+				{
+					currentTimer--;
+					
+					if(currentTimer <= 0)
+					{
+						playAudio("timer");
+						clearInterval(timerIntervalID);
+					}
+				}
+				
+				timer = document.getElementById("timer");
+				
+				if(currentTimer <= 0)
+				{
+					timer.value = "Click to Start Timer";
+				}
+				else
+				{
+					timer.value = currentTimer;
+				}
+			}
+			
+			function playAudio(name)
+			{
+				switch(name)
+				{
+					case "timer":
+						timerAudio.pause();
+						timerAudio.play();
+						break;
+					case "tv_start":
+						tv_startAudio.pause();
+						tv_startAudio.play();
+						break;
+				}
+			}
+			
+			function addShoppingItem()
+			{
+				item = document.getElementById("newItem");
+				
+				if(item.value != "" && item.value != "Enter Item")
+				{
+					shoppingList.push(item.value);
+					item.value = "";
+					updateShoppingList();
+				}
+			}
+			function updateShoppingList()
+			{
+				list = document.getElementById("shoppingList");
+				var fullHTML = "<ul>";
+				
+				for (var i = 0; i < shoppingList.length; i++)
+				{
+					fullHTML += "<li>" + shoppingList[i] + "</li>"
+				}
+				
+				fullHTML += "</ul>";
+				
+				list.innerHTML = fullHTML;
 			}
 			
 		</script>
