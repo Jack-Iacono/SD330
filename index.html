@@ -6,14 +6,13 @@
 		<title>
 			index.html
 		</title>
-		<h1><center>Index</center></h1>
-		<hr>
 	</head>
 	
 	<style>
 			body 
 			{
-				background-color: cornsilk; 
+				background-image: url('background.jpg');
+				background-size: 100% 100%;
 				color: black; 
 				font-family: verdana;
 			}
@@ -30,6 +29,10 @@
 			hr
 			{
 				border: 2px dashed slateblue
+			}
+			p
+			{
+				text-align:center;
 			}
 			
 			.contentArea
@@ -58,10 +61,45 @@
 				
 				float:right;
 			}
+			.portrait
+			{
+				border: solid black;
+				border-width: 5px;
+				padding: 2px 2px 2px 2px;
+				margin: 10px 10px 10px 10px;
+				background-color: lightcyan;
+				width: 200px;
+				height: 200px;
+				
+				margin-left:auto;
+				margin-right:auto;
+				display:block;
+			}
+			.desc
+			{
+				border: solid black;
+				border-width: 5px;
+				padding: 2px 2px 2px 2px;
+				margin: 10px 10px 10px 10px;
+				background-color: lightcyan;
+				width: auto;
+				
+				margin-left:auto;
+				margin-right:auto;
+				display:block;
+			}
 			
 		</style>
 	
 	<body onLoad="githubFilelist()">
+		
+		<h1><center>John's Home Page</center></h1>
+		<img src="./portrait.png" class="portrait">
+		<hr>
+			<p class="desc">
+				Welcome to my home page. Here you can find all of the various links to my html and resource files.
+			</p>
+		<hr>
 		
 		<div id="htmlDiv" class="sectionLarge">
 		
@@ -87,15 +125,10 @@
 	
 	<footer>
 		<hr>
-		<center>&copy J. Iacono 2023</center>
+		<center>&copy J. Iacono 11/7/2023</center>
 	</footer>
 	
 	<script>
-	
-	function onLoad()
-	{
-	
-	}
 
 	function githubFilelist()
 	{
