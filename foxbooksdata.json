@@ -36,7 +36,7 @@
 			"semester": "spring",
 			"professor": "Christopher Reck"
 		}
-	}
+	},
 	
 	"books":
 	{
@@ -63,7 +63,7 @@
 		},
 		"CRDV1": 
 		{
-			"isbn": 0785440313,
+			"isbn": 1785440313,
 			"title": "CAREER PLANNING STUDENT TEXT",
 			"author": "Career Johnson",
 			"course_id": 20234010419
@@ -77,7 +77,7 @@
 		},
 		"CRDV3": 
 		{
-			"isbn": 0105440729,
+			"isbn": 1105440729,
 			"title": "Don't Staple Your Hand to Your Desk (A Guide to Office Life)",
 			"author": "Me Myself",
 			"course_id": 20234010419
