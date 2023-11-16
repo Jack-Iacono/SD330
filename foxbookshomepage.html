@@ -322,11 +322,12 @@
 
 	function githubFilelist()
 	{
-				
 		var courseString = "";
 		var bookString = "";
 		var bookButtonString = "";
 	
+		console.log("Started File Fetch");
+		
 	  // this creates JS object 'data' with a list of files   	 
 		(async () => {
 			const response = await fetch("https://jack-iacono.github.io/SD330/foxbooksdata.json");
@@ -352,7 +353,9 @@
 		
 		document.getElementById('bookButtonDiv').innerHTML = bookButtonString;
 		
-		})
+		})()
+		
+		console.log("End File Fetch");
 	
 	}
 	
