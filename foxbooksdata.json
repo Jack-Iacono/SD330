@@ -36,6 +36,27 @@
 			"semester": "spring",
 			"professor": "Christopher Reck"
 		}
+		"RND100": 
+		{
+			"id": 20234019828,
+			"title": "Research and Stuff",
+			"semester": "spring",
+			"professor": "Dwayne Johnson"
+		}
+		"RND200": 
+		{
+			"id": 20234019364,
+			"title": "Destroying Anti-Matter",
+			"semester": "spring",
+			"professor": "Neil Tyson"
+		}
+		"COOL115": 
+		{
+			"id": 20234019277,
+			"title": "Being Cool",
+			"semester": "spring",
+			"professor": "John Iacono"
+		}
 	},
 	
 	"books":
@@ -78,7 +99,7 @@
 		"CRDV3": 
 		{
 			"isbn": 1105440729,
-			"title": "Dont Staple Your Hand to Your Desk - A Guide to Office Life",
+			"title": "Don't Staple Your Hand to Your Desk (A Guide to Office Life)",
 			"author": "Me Myself",
 			"course_id": 20234010419
 		},
@@ -144,6 +165,49 @@
 			"title": "I'm Running out of Ideas for these Book Names",
 			"author": "James Smith",
 			"course_id": 20234011733
+		},
+		"RND1": 
+		{
+			"isbn": 12945678909,
+			"title": "Research - The Book",
+			"author": "Ran D Person",
+			"course_id": 20234019828
+		},
+		"RND2": 
+		{
+			"isbn": 12947934567,
+			"title": "Please Don't Read This",
+			"author": "My Mom",
+			"course_id": 20234019828
+		},
+		"RND3": 
+		{
+			"isbn": 12098532746,
+			"title": "Corporate Drones - A Guide",
+			"author": "Ran D Person",
+			"course_id": 20234019364
+		},
+		"RND4": 
+		{
+			"isbn": 12987459324,
+			"title": "Profesional Research",
+			"author": "Robert Green",
+			"course_id": 20234019364
+		},
+		"COOL1": 
+		{
+			"isbn": 12032949174,
+			"title": "Skateboarding for Dummies",
+			"author": "Toney Hawk",
+			"course_id": 20234019277
+		},
+		"COOL2": 
+		{
+			"isbn": 12102848326,
+			"title": "Doing a Kickflip",
+			"author": "John Iacono",
+			"course_id": 20234019277
 		}
 	}
 }
+
