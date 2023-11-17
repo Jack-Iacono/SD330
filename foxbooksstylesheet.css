@@ -1,0 +1,278 @@
+body 
+{
+	background-color:lightcoral;
+	color: black; 
+	font-family: verdana;
+}
+h1
+{
+	text-align: center;
+}
+h2
+{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+}
+hr
+{
+	border: 2px solid white
+}
+p
+{
+	text-align:center;
+}
+
+.contentArea
+{
+	height: 400px;
+}
+.sectionLarge
+{
+	border: solid black;
+	border-width: 5px;
+	padding: 2px 2px 2px 2px;
+	margin: 10px 10px 10px 10px;
+	background-color:lightgrey;
+	width: 98%;
+	height: auto;
+	float:right;
+	
+	border-radius:10px;
+}
+.sectionMedium
+{
+	border: solid black;
+	border-width: 5px;
+	padding: 2px 2px 2px 2px;
+	margin: 10px 10px 10px 10px;
+	background-color: lightcoral;
+	width: 64%;
+	
+	border-radius:10px;
+	
+	float:right;
+}
+.sectionSmall
+{
+	border: solid black;
+	border-width: 5px;
+	padding: 2px 2px 2px 2px;
+	margin: 10px 10px 10px 10px;
+	background-color: lightcoral;
+	width: 31%;
+	
+	border-radius:10px;
+	
+	float:right;
+}
+.portrait
+{
+	padding: 2px 2px 2px 2px;
+	margin: 10px 10px 10px 10px;
+	width: 200px;
+	height: 200px;
+	
+	margin-left:auto;
+	margin-right:auto;
+}
+.logo
+{
+	padding: 2px 2px 2px 2px;
+	margin: 10px 10px 10px 10px;
+	width: 600px;
+	height: 200px;
+	
+	margin-left:auto;
+	margin-right:auto;
+}
+.storeImage
+{
+	padding: 2px 2px 2px 2px;
+	margin: 10px 10px 10px 10px;
+	width: 60%;
+	height: 20%;
+	
+	border: dashed 5px;
+	
+	float:left;
+}
+.cartIcon
+{
+	width: 40px;
+	height: 40px;
+	
+	padding: 2px 2px 2px 2px;
+	
+	background-color:white;
+	
+	border-radius: 5px;
+	border: solid black;
+	border-width: 2px;
+	
+	float:right;
+}
+.desc
+{
+	border: solid black;
+	border-width: 5px;
+	padding: 2px 2px 2px 2px;
+	margin: 10px 10px 10px 10px;
+	background-color: white;
+	width: auto;
+	
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+.course
+{
+	border: solid black;
+	border-width: 5px;
+	padding: 2px 2px 2px 2px;
+	margin: 10px 10px 10px 10px;
+	background-color: darkred;
+	width: 90%;
+	
+	line-height: 30px;
+	
+	border-radius:10px;
+	
+	text-align:center;
+	color: white;
+	
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+.book
+{
+	border: solid black;
+	border-width: 5px;
+	padding: 2px 2px 2px 2px;
+	margin: 10px 10px 10px 10px;
+	background-color: darkred;
+	width: 90%;
+	
+	line-height: 30px;
+	
+	border-radius:10px;
+	
+	text-align:center;
+	color: white;
+	
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+.bookButton
+{
+	padding: 2px 2px 2px 2px;
+	margin: 2px 2px 2px 2px;
+	
+	width: 90%;
+	height: auto;
+	
+	border-width: 5px;
+	border-color: lightgrey;
+	
+	border-radius:10px;
+}
+.bookButtonSmall
+{
+	padding: 2px 2px 2px 2px;
+	margin: 2px 2px 2px 2px;
+	
+	width: 48%;
+	height: 50px;
+	
+	border-width: 5px;
+	border-color: lightgrey;
+	
+	border-radius:10px;
+}
+.courseButton
+{
+	padding: 2px 2px 2px 2px;
+	margin: 5px 5px 5px 5px;
+	
+	width: 90%;
+	height: 90px;
+	
+	border-width: 5px;
+	border-color: lightgrey;
+	
+	border-radius:10px;
+}
+.courseButtonSmall
+{
+	padding: 2px 2px 2px 2px;
+	margin: 5px 5px 5px 5px;
+	
+	width: 48%;
+	height: 90px;
+	
+	border-width: 5px;
+	border-color: lightgrey;
+	
+	border-radius:10px;
+}
+.optionsTable
+{
+	text-align:center;
+	
+	width: 50%;
+	
+	border-radius:10px;
+	
+	margin-left:auto;
+	margin-right:auto;
+}
+.menuButton
+{
+	text-align:center;
+	
+	width: 100%;
+	height: 50px;
+	
+	border-width: 5px;
+	border-color: lightgrey;
+	
+	border-radius:10px;
+	
+	background-color:white;
+}
+.breadButton
+{
+	text-align:center;
+	
+	width: 150px;
+	
+	border-width: 5px;
+	border-color: lightgrey;
+	
+	border-radius:10px;
+	
+	background-color:white;
+}
+.menuBar
+{
+	width: auto;
+	height: auto;
+	
+	border-radius:10px;
+	
+	padding: 5px 5px 5px 5px;
+	margin: 10px 10px 10px 10px;
+	
+	background-color:darkred;
+}
+.pageHeader
+{
+	width: 100%;
+	height: auto;
+	
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}

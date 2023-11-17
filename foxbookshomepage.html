@@ -6,241 +6,32 @@
 		<title>
 			FoxBooks
 		</title>
+		
+		<link rel="stylesheet" type="text/css" href="foxbooksstylesheet.css" />
+		
+		<style>
+		
+			.welcomePanel
+			{
+				border: solid black;
+				border-width: 5px;
+				padding: 2px 2px 5px 2px;
+				margin: 10px 10px 0px 0px;
+				background-color: darkred;
+				width: 33%;
+
+				color:white;
+
+				border-radius:10px;
+
+				float:right;
+			}
+		
+		</style>
+		
 	</head>
 	
-	<style>
-			body 
-			{
-				background-color:lightcoral;
-				color: black; 
-				font-family: verdana;
-			}
-			h1
-			{
-				text-align: center;
-			}
-			h2
-			{
-				padding: 0px 0px 0px 0px;
-				margin: 0px 0px 0px 0px;
-				text-align: center;
-			}
-			hr
-			{
-				border: 2px solid white
-			}
-			p
-			{
-				text-align:center;
-			}
-			
-			.contentArea
-			{
-				height: 400px;
-			}
-			.sectionLarge
-			{
-				border: solid black;
-				border-width: 5px;
-				padding: 2px 2px 2px 2px;
-				margin: 10px 10px 10px 10px;
-				background-color:lightgrey;
-				width: 98%;
-				height: auto;
-				float:right;
-				
-				border-radius:10px;
-			}
-			.sectionSmall
-			{
-				border: solid black;
-				border-width: 5px;
-				padding: 2px 2px 2px 2px;
-				margin: 10px 10px 10px 10px;
-				background-color: lightcoral;
-				width: 31%;
-				
-				border-radius:10px;
-				
-				float:right;
-			}
-			.portrait
-			{
-				padding: 2px 2px 2px 2px;
-				margin: 10px 10px 10px 10px;
-				width: 200px;
-				height: 200px;
-				
-				margin-left:auto;
-				margin-right:auto;
-			}
-			.logo
-			{
-				padding: 2px 2px 2px 2px;
-				margin: 10px 10px 10px 10px;
-				width: 600px;
-				height: 200px;
-				
-				margin-left:auto;
-				margin-right:auto;
-			}
-			.cartIcon
-			{
-				width: 40px;
-				height: 40px;
-				
-				padding: 2px 2px 2px 2px;
-				
-				background-color:white;
-				
-				border-radius: 5px;
-				border: solid black;
-				border-width: 2px;
-				
-				float:right;
-			}
-			.desc
-			{
-				border: solid black;
-				border-width: 5px;
-				padding: 2px 2px 2px 2px;
-				margin: 10px 10px 10px 10px;
-				background-color: white;
-				width: auto;
-				
-				margin-left:auto;
-				margin-right:auto;
-				display:block;
-			}
-			.course
-			{
-				border: solid black;
-				border-width: 5px;
-				padding: 2px 2px 2px 2px;
-				margin: 10px 10px 10px 10px;
-				background-color: darkred;
-				width: 90%;
-				
-				line-height: 20px;
-				
-				border-radius:10px;
-				
-				text-align:center;
-				color: white;
-				
-				margin-left:auto;
-				margin-right:auto;
-				display:block;
-			}
-			.book
-			{
-				border: solid black;
-				border-width: 5px;
-				padding: 2px 2px 2px 2px;
-				margin: 10px 10px 10px 10px;
-				background-color: darkred;
-				width: 90%;
-				
-				line-height: 25px;
-				
-				border-radius:10px;
-				
-				text-align:center;
-				color: white;
-				
-				margin-left:auto;
-				margin-right:auto;
-				display:block;
-			}
-			.bookButton
-			{
-				padding: 2px 2px 2px 2px;
-				margin: 2px 2px 2px 2px;
-				
-				width: 400px;
-				height: 30px;
-				
-				border-width: 5px;
-				border-color: lightgrey;
-				
-				border-radius:10px;
-			}
-			.courseButton
-			{
-				padding: 2px 2px 2px 2px;
-				margin: 5px 5px 5px 5px;
-				
-				width: 90%;
-				height: 90px;
-				
-				border-width: 5px;
-				border-color: lightgrey;
-				
-				border-radius:10px;
-			}
-			.optionsTable
-			{
-				text-align:center;
-				
-				width: 50%;
-				
-				border-radius:10px;
-				
-				margin-left:auto;
-				margin-right:auto;
-			}
-			.menuButton
-			{
-				text-align:center;
-				
-				width: 100%;
-				height: 50px;
-				
-				border-width: 5px;
-				border-color: lightgrey;
-				
-				border-radius:10px;
-				
-				background-color:white;
-			}
-			.breadButton
-			{
-				text-align:center;
-				
-				width: 150px;
-				
-				border-width: 5px;
-				border-color: lightgrey;
-				
-				border-radius:10px;
-				
-				background-color:white;
-			}
-			.menuBar
-			{
-				width: auto;
-				height: auto;
-				
-				border-radius:10px;
-				
-				padding: 5px 5px 5px 5px;
-				margin: 10px 10px 10px 10px;
-				
-				background-color:darkred;
-			}
-			.pageHeader
-			{
-				width: 100%;
-				height: auto;
-				
-				margin-left:auto;
-				margin-right:auto;
-				display:block;
-			}
-			
-		</style>
-	
-	<body onLoad="githubFilelist()">
+	<body>
 		
 		<div class="pageHeader">
 			<img src="maristlogo.png" class="portrait">
@@ -249,44 +40,56 @@
 		
 		<hr>
 		
+		<h1>Welcome to FoxBooks</h1>
+		
 		<div class="menuBar">
+			
 			<img src="shopping_cart.png" class="cartIcon" style>
 			<table class="optionsTable">
 				<tr>
 					<td><input type=button value="Books" class="menuButton"></td>
-					<td><input type=button value="Authors" class="menuButton"></td>
 					<td><input type=button value="Courses" class="menuButton"></td>
 					<td><input type=button value="Contact Us" class="menuButton"></td>
 					<td><input type=button value="Check Cart" class="menuButton"></td>
 				</tr>
 			</table>
 			
-			<p style="color:white;"><input type=button value="Home" class="breadButton"> &#8594; <input type=button value="Courses" class="breadButton"> &#8594; <input type=button value="Books By Course" class="breadButton"></p>
 		</div>
 		
 		<div id="htmlDiv" class="sectionLarge">
 		
 			<div id="bookDiv" class="sectionSmall">
-				<h1> Available Books </h1>
+				<h1> Quick Navigation </h1>
 				<div id="bookButtonDiv" class="book">
-					
+					<h1>Having Trouble Finding Textbooks?</h1>
+					We can help, click below to find them!
+					<br>
+					<br>
+					<input type=button value="Books" class="menuButton">
+					<hr>
+					<h1>Want to Contact Us</h1>
+					We want to hear from you, leave us some feedback below.
+					<br>
+					<br>
+					<input type=button value="Books" class="menuButton">
+					<hr>
 				</div>
 			</div>
 			
-			<div id="mainDiv" class="sectionSmall">
-				<h1> Your Search </h1>
-				<div id="mainBookDiv">
-					
-				</div>
-				<div id="bookContentDiv">
-					
-				</div>
-			</div>
-			
-			<div id="courseDiv" class="sectionSmall">
-				<h1> Current Courses </h1>
-				<div id="courseContentDiv" class="book">
+			<div id="courseDiv" class="sectionMedium">
+				<h1> We Have New Books In! </h1>
+				<img src="bookstore.jpg" class="storeImage">
 				
+				<div id="mainContentDiv">
+					<div class="welcomePanel">
+						<h1>Come Check Out Our New Selection!</h1>
+						<br>
+						We have added a ton of new books to our catalog, why don't you check them out! Just click on the buttons at the top to find any of the books you are looking for, and maybe some you didn't know you needed.
+						<br>
+						<br>
+						<br>
+						<tr><td><input type=button value="Bring Me The Books!" class="menuButton"></td></tr>
+					</div>
 				</div>
 			</div>
 			
@@ -298,120 +101,6 @@
 		<hr>
 		<center>&copy J. Iacono 11/7/2023</center>
 	</footer>
-	
-	<script>
-
-	var courses;
-	var books;
-	var data;
-
-	function showBook(num)
-	{
-		document.getElementById('bookContentDiv').innerHTML = num;
-		
-		var bookString = "<div class='book'>";
-		bookString += "<h2>" + data["books"][num]["title"] + "</h2>"; 
-		bookString += "<br>ISBN: " + data["books"][num]["isbn"]; 
-		bookString += "<br>Author: " + data["books"][num]["author"]; 
-		bookString += "<br>Course: " + GetCourseByID(data["books"][num]["course_id"]); 
-		bookString += "<br><br><input type=button value='Add to Cart' class='bookButton'>";
-		bookString += "</div>";
-		
-		document.getElementById('bookContentDiv').innerHTML = bookString;
-	}
-
-	function githubFilelist()
-	{
-		var courseString = "";
-		var bookString = "";
-		var bookButtonString = "";
-	
-		console.log("Started File Fetch");
-		
-	  // this creates JS object 'data' with a list of files   	 
-		(async () => {
-			const response = await fetch("https://jack-iacono.github.io/SD330/foxbooksdata.json");
-			data = await response.json();
-		
-		courses = Object.keys(data['courses']);
-		books = Object.keys(data['books']);
-		
-		// runs through the courses and adds them
-		for(const i of courses)
-		{
-			courseString += '<br><input type=button value="' + i + '" onclick="GetCourseBooks(\'' + i + '\')" ' + ' class="courseButton">';
-		}
-		
-		// runs through the courses and adds them
-		for(const i of books)
-		{	
-			//This is why I hate HTML
-			bookButtonString += '<br><input type=button value="' + data["books"][i]["title"] + '" onclick="showBook(\'' + i + '\')" ' + ' class="bookButton">';
-		}
-        
-		document.getElementById('courseContentDiv').innerHTML = courseString;
-		
-		document.getElementById('bookButtonDiv').innerHTML = bookButtonString;
-		
-		})()
-		
-		console.log("End File Fetch");
-	
-	}
-	
-	function GetCourseByID(courseId)
-	{
-		for(const i of courses)
-		{
-			if(data["courses"][i]["id"] == courseId)
-				return i;
-		}
-		
-		return "null";
-	}
-	function GetCourseBooks(courseName)
-	{
-		clearBookDiv();
-	
-		let courseString = "<div class='book'>";
-		
-		for(const i of courses)
-		{
-			if(courseName == i)
-			{
-				courseString += '<h3>' + data["courses"][i]["title"] + '<br>' + i + '</h3>'; 
-				courseString += '<br>Professor: ' + data["courses"][i]["professor"]; 
-				courseString += '<br>Semester: ' + data["courses"][i]["semester"]; 
-			}
-		}
-		
-	
-		let buttonString = "<hr>";
-		buttonString += "<br><h2>Books</h2>";
-	
-		let courseId = data["courses"][courseName]["id"];
-	
-		for(const i of books)
-		{
-			if(data["books"][i]["course_id"] == courseId)
-			{
-				buttonString += '<br><input type=button value="' + data["books"][i]["title"] + '" onclick="showBook(\'' + i + '\')" ' + ' class="bookButton">';
-			}
-		}
-		
-		document.getElementById('mainBookDiv').innerHTML = courseString + buttonString;
-	}
-	
-	function clearBookDiv()
-	{
-		document.getElementById('bookContentDiv').innerHTML = "";
-	}
-	function clearCourseDiv()
-	{
-		document.getElementById('mainBookDiv').innerHTML = "";
-	}
-	
-	</script>
 
 	</body>
 
