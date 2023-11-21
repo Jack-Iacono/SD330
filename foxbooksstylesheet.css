@@ -40,6 +40,19 @@ p
 	
 	border-radius:10px;
 }
+.sectionWide
+{
+	border: solid black;
+	border-width: 5px;
+	padding: 2px 2px 2px 2px;
+	margin: 10px 10px 10px 10px;
+	background-color: lightcoral;
+	width: 97%;
+	
+	border-radius:10px;
+	
+	float:right;
+}
 .sectionMedium
 {
 	border: solid black;
@@ -96,6 +109,19 @@ p
 	border: dashed 5px;
 	
 	float:left;
+}
+.dealImage
+{
+	padding: 2px 2px 2px 2px;
+	margin: 10px 10px 10px 10px;
+	width: 90%;
+	height: auto;
+	
+	border: dashed 5px;
+	
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
 }
 .cartIcon
 {
