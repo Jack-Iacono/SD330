@@ -1,0 +1,249 @@
+{
+	"courses":
+	{
+		"CMPT330": 
+		{
+			"id": 20234011011,
+			"title": "System Design",
+			"semester": "fall",
+			"professor": "Andrew Tokash",
+			"days": "MR",
+			"time": "08:00"
+		},
+		"CMPT414":
+		{
+			"id": 20234011163,
+			"title": "Game Design and Programming I",
+			"semester": "fall",
+			"professor": "Matt Johnson",
+			"days": "TR",
+			"time": "02:00"
+		},
+		"GAME480": 
+		{
+			"id": 20234011733,
+			"title": "Game Studio",
+			"semester": "fall",
+			"professor": "Mengqi Gao",
+			"days": "MW",
+			"time": "09:30"
+		},
+		"CRDV105": 
+		{
+			"id": 20234010419,
+			"title": "Career Planning",
+			"semester": "spring",
+			"professor": "Richard Cusano",
+			"days": "RF",
+			"time": "10:30"
+		},
+		"BUS100": 
+		{
+			"id": 20234010031,
+			"title": "Intro to Business and Management",
+			"semester": "spring",
+			"professor": "Christopher Reck",
+			"days": "MT",
+			"time": "12:30"
+		},
+		"RND100": 
+		{
+			"id": 20234019828,
+			"title": "Research and Stuff",
+			"semester": "spring",
+			"professor": "Dwayne Johnson",
+			"days": "MF",
+			"time": "11:00"
+		},
+		"RND200": 
+		{
+			"id": 20234019364,
+			"title": "Destroying Anti-Matter",
+			"semester": "spring",
+			"professor": "Neil Tyson",
+			"days": "TF",
+			"time": "06:30"
+		},
+		"COOL115": 
+		{
+			"id": 20234019277,
+			"title": "Being Cool",
+			"semester": "spring",
+			"professor": "John Iacono",
+			"days": "WR",
+			"time": "03:30"
+		}
+	},
+	
+	"books":
+	{
+		"BUS1": 
+		{
+			"isbn": 1593995482,
+			"title": "Introduction to Business and Management",
+			"author": "John Business",
+			"course_id": 20234010031,
+			"price": 12.50
+		},
+		"BUS2": 
+		{
+			"isbn": 1593596284,
+			"title": "Business for Dummies",
+			"author": "John Business",
+			"course_id": 20234010031,
+			"price": 27.50
+		},
+		"BUS3": 
+		{
+			"isbn": 1723536284,
+			"title": "Money Laundering done Right",
+			"author": "Dave Revenue",
+			"course_id": 20234010031,
+			"price": 82.02
+		},
+		"CRDV1": 
+		{
+			"isbn": 1785440313,
+			"title": "CAREER PLANNING STUDENT TEXT",
+			"author": "Career Johnson",
+			"course_id": 20234010419,
+			"price": 2.45
+		},
+		"CRDV2": 
+		{
+			"isbn": 1283450393,
+			"title": "How not to Embarass Yourself in Interviews",
+			"author": "Career Johnson",
+			"course_id": 20234010419,
+			"price": 5.03
+		},
+		"CRDV3": 
+		{
+			"isbn": 1105440729,
+			"title": "Don't Staple Your Hand to Your Desk (A Guide to Office Life)",
+			"author": "Me Myself",
+			"course_id": 20234010419,
+			"price": 1000.00
+		},
+		"CMPT1": 
+		{
+			"isbn": 1736049119,
+			"title": "Designing Systems",
+			"author": "Mista System",
+			"course_id": 20234011011,
+			"price": 1.00
+		},
+		"CMPT2": 
+		{
+			"isbn": 1733044179,
+			"title": "Making Games and Stuff",
+			"author": "Billy Games",
+			"course_id": 20234011163,
+			"price": 12.34
+		},
+		"CMPT3": 
+		{
+			"isbn": 1720539119,
+			"title": "Data Management",
+			"author": "System Francis",
+			"course_id": 20234011011,
+			"price": 64.02
+		},
+		"CMPT4": 
+		{
+			"isbn": 1928740586,
+			"title": "Systems, What are They?",
+			"author": "Carl Normalton",
+			"course_id": 20234011011,
+			"price": 63.59
+		},
+		"CMPT5": 
+		{
+			"isbn": 1736849504,
+			"title": "Jumping, in Games",
+			"author": "Billy Games",
+			"course_id": 20234011163,
+			"price": 74.20
+		},
+		"CMPT6": 
+		{
+			"isbn": 1937620573,
+			"title": "Imersive Gaming",
+			"author": "Johnny Player",
+			"course_id": 20234011163,
+			"price": 24.50
+		},
+		"GAME1": 
+		{
+			"isbn": 1552482484,
+			"title": "Games for Dummies",
+			"author": "Billy Games",
+			"course_id": 20234011733,
+			"price": 53.25
+		},
+		"GAME2": 
+		{
+			"isbn": 1435295739,
+			"title": "Gaming for Breakfast",
+			"author": "Gamer Johnson",
+			"course_id": 20234011733,
+			"price": 74.30
+		},
+		"GAME3": 
+		{
+			"isbn": 1294795724,
+			"title": "I'm Running out of Ideas for these Book Names",
+			"author": "James Smith",
+			"course_id": 20234011733,
+			"price": 23.84
+		},
+		"RND1": 
+		{
+			"isbn": 12945678909,
+			"title": "Research - The Book",
+			"author": "Ran D Person",
+			"course_id": 20234019828,
+			"price": 64.20
+		},
+		"RND2": 
+		{
+			"isbn": 12947934567,
+			"title": "Please Don't Read This",
+			"author": "My Mom",
+			"course_id": 20234019828,
+			"price": 21.20
+		},
+		"RND3": 
+		{
+			"isbn": 12098532746,
+			"title": "Corporate Drones - A Guide",
+			"author": "Ran D Person",
+			"course_id": 20234019364,
+			"price": 50.20
+		},
+		"RND4": 
+		{
+			"isbn": 12987459324,
+			"title": "Profesional Research",
+			"author": "Robert Green",
+			"course_id": 20234019364,
+			"price": 21.32
+		},
+		"COOL1": 
+		{
+			"isbn": 12032949174,
+			"title": "Skateboarding for Dummies",
+			"author": "Toney Hawk",
+			"course_id": 20234019277,
+			"price": 64.23
+		},
+		"COOL2": 
+		{
+			"isbn": 12102848326,
+			"title": "Doing a Kickflip",
+			"author": "John Iacono",
+			"course_id": 20234019277,
+			"price": 15.20
+		}
+	}
+}
